@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Security</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Allerta+Stencil" />
+
+    <!-- JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div style="text-align:center; margin-top:20px; font-size:xx-large">
+        <a href="aboutus.html"> About Us  </a> |
+        <a href="#"> Mission  </a> |
+        <a href="recruitment" style="color:red"> Recruitment </a> |
+        <a href="#"> Booking </a>
+    </div>
+
+    <!-- CONTENT -->
+    <div style="text-align:center; margin-top:20px">
+    	<form th:action="@{/application}" method="post">
+    		<label>Name</label>
+    		<br/>
+    		<input type="text"/>
+    		
+    		<br/> <br/>
+    		
+    		<label>Email</label>
+    		<br/>
+    		<input type="email"/>
+    		
+    		<br/> <br/>
+    		
+    		<label>Number</label>
+    		<br/>
+    		<input type="text"/>
+    		
+    		<br/> <br/>
+    		
+    		<label>Work Experience</label>
+    		<br/>
+    		<textarea cols="40" rows="5"></textarea>
+    		
+    		<br/> <br/>
+    		
+    		<label>Resume</label>
+    		<br/>
+    		<input type="file" style="display:unset">
+    		
+    		<br/><br/>
+    		
+    		<input type="submit" value="Submit" />
+    	</form>
+    </div>
+
+
+</body>
+</html>

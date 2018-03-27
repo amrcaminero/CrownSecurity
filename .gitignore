@@ -25,6 +25,9 @@ hs_err_pid*
 target/
 .springBeans
 .factorypath
+mvnw
+mvnw.cmd
+.mvn/*
 
 
 # STS project configuration files
