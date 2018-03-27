@@ -7,8 +7,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.fnsystems.crownsecurity.persistence.recruitement.ApplicationEntity;
 
@@ -26,10 +24,10 @@ public class RecruitmentController {
 	}
 
 	@PostMapping(value = "/application")
-	public String submit(@ModelAttribute ApplicationEntity application, ModelMap model, @RequestParam("file") MultipartFile file) throws IOException {
+	public String submit(@ModelAttribute ApplicationEntity application, ModelMap model) throws IOException {
 
 		// Add the image to the event
-		application.setResumePath(file.getOriginalFilename());
+//		application.setResumePath(file.getOriginalFilename());
 		
 		// Store the event
 //		application = eventService.save(application);
@@ -40,6 +38,6 @@ public class RecruitmentController {
 		model.addAttribute("message", "Your application have been sent successfully.");
 		
 		// View's name
-		return "about";
+		return "aboutus";
 	}
 }
